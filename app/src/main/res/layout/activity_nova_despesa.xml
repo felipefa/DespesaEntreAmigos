@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_nova_despesa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="5dp"
+    tools:activity="araujo.felipe.contajusta.layouts.NovaDespesa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- Conteúdo da nova despesa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_descricao_despesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/et_descricaoDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/descricao_despesa"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:text="@string/amigos"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_add_amigo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|center"
+                        android:background="@drawable/ic_add_amigo" />
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lv_amigos_nova_despesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/list_border"
+                    android:divider="#FFF"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_add_amigo_grande"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/list_border"
+                    android:text="@string/btn_add_amigo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:text="@string/itens"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_add_item"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|center"
+                        android:background="@drawable/ic_add_item" />
+                </android.support.design.widget.CoordinatorLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lv_itens_nova_despesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/list_border"
+                    android:divider="#FFF"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_add_item_grande"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/list_border"
+                    android:text="@string/btn_add_item" />
+            </LinearLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_cancelar_nova_despesa"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="start|center"
+                    android:text="@string/cancelar"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:theme="@style/MyMaterialTheme.ButtonRed" />
+
+                <Button
+                    android:id="@+id/btn_resumo_nova_despesa"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="end|center"
+                    android:text="@string/resumo"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:theme="@style/MyMaterialTheme.ButtonGreen" />
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="adicionarImagens">
+        <item>Escolher da galeria</item>
+        <item>Tirar uma foto</item>
+        <item>Remover imagem</item>
+    </string-array>
+
+    <string-array name="imgItemsIds">
+        <item>img_galeria</item>
+        <item>img_camera</item>
+        <item>img_remover</item>
+    </string-array>
+
+    <string-array name="menuContexto">
+        <item>Editar</item>
+        <item>Excluir</item>
+        <item>Cancelar</item>
+    </string-array>
+
+    <string-array name="menuItemsIds">
+        <item>menu_editar</item>
+        <item>menu_excluir</item>
+        <item>menu_cancelar</item>
+    </string-array>
+
+</resources>

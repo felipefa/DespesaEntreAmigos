@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="araujo.felipe.contajusta">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new_round"
+        android:label="@string/app_name_nome"
+        android:theme="@style/MyMaterialTheme">
+        <activity android:name=".layouts.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layouts.NovaDespesa"
+            android:parentActivityName=".layouts.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".layouts.ResumoDespesa" />
+        <activity
+            android:name=".layouts.AdicionarAmigo"
+            android:parentActivityName=".layouts.ListaAmigos"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".layouts.AdicionarItem"
+            android:parentActivityName=".layouts.NovaDespesa"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".layouts.ListaAmigos"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>

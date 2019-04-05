@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_resumo_despesa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="5dp"
+    tools:activity="araujo.felipe.contajusta.layouts.ResumoDespesa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <!-- Toolbar -->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:text="@string/amigos"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_amigos_resumo"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@drawable/list_border"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:text="@string/itens"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_itens_resumo"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@drawable/list_border"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:text="@string/total"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_valor_total_resumo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.design.widget.CoordinatorLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <Button
+                    android:id="@+id/btn_finalizar_resumo"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="end"
+                    android:text="@string/finalizar"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:theme="@style/MyMaterialTheme.ButtonGreen" />
+
+                <Button
+                    android:id="@+id/btn_editar_resumo"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="start"
+                    android:text="@string/editar"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:theme="@style/MyMaterialTheme.ButtonBlue" />
+            </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

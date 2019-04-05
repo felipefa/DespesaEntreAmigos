@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:activity="araujo.felipe.contajusta.layouts.MainActivity">
+
+    <item
+        android:id="@+id/sobre"
+        android:title="@string/sobre"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/excluir_tudo"
+        android:title="@string/excluir_tudo"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>
